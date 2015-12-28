@@ -57,6 +57,7 @@ class ToneGeneratorNote: AKNote {
         amplitude.value = 1.0
     }
 }
+
 class HarmonizerInstrument: AKInstrument {
     
     // INSTRUMENT DEFINITION ===================================================
