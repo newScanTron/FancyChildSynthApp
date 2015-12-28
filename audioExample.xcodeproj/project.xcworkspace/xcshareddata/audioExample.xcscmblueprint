@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "38042175DBCCBFAA30C1DFC884E9B274B99E1262",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "38042175DBCCBFAA30C1DFC884E9B274B99E1262" : 0,
+    "5D7AE6F26A6D7E393D8CA002FDE5D0D8ABCDAE62" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0AF11F44-8EDD-4F0D-8083-0B42D147423A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "38042175DBCCBFAA30C1DFC884E9B274B99E1262" : "audioExample\/",
+    "5D7AE6F26A6D7E393D8CA002FDE5D0D8ABCDAE62" : "AudioKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "audioExample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "audioExample.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/newScanTron\/FancyChildSynthApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "38042175DBCCBFAA30C1DFC884E9B274B99E1262"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/audiokit\/AudioKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5D7AE6F26A6D7E393D8CA002FDE5D0D8ABCDAE62"
+    }
+  ]
+}

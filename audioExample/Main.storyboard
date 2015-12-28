@@ -311,9 +311,9 @@
                                 </constraints>
                                 <state key="normal" title="record"/>
                                 <connections>
-                                    <action selector="C1OctaveAct:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vB1-MI-ZD3"/>
                                     <action selector="startRecording:" destination="vXZ-lx-hvc" eventType="touchDown" id="ANQ-48-WdV"/>
                                     <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="55S-Jo-ioa"/>
+                                    <action selector="stopRecording:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JmS-hi-rgw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFK-6i-DXI">
@@ -324,9 +324,9 @@
                                 </constraints>
                                 <state key="normal" title="play"/>
                                 <connections>
-                                    <action selector="C1OctaveAct:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ye0-he-Abq"/>
                                     <action selector="startPlaying:" destination="vXZ-lx-hvc" eventType="touchDown" id="lSs-fY-iJc"/>
-                                    <action selector="stopPlaying:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="peX-J3-Q8V"/>
+                                    <action selector="stopPlaying:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7bv-rV-OLk"/>
+                                    <action selector="stopPlaying:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="IWJ-by-QhK"/>
                                 </connections>
                             </button>
                         </subviews>
