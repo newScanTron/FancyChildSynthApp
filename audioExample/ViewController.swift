@@ -9,34 +9,52 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //harmonizer and sampaler
-    let harmonizer = HarmonizerInstrument();
-    let sampler = AKSampler();
+
+ 
+    let appDel = UIApplication.sharedApplication().delegate as! AppDelegate
+  
+    
+    @IBOutlet weak var toggleSwitch: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
-        AKOrchestra.addInstrument(harmonizer)
-        // Do any additional setup after loading the view, typically from a nib.
-//        let inst = AKInstrument()
-//        inst.setAudioOutput(AKOscillator())
-//        AKOrchestra.addInstrument(inst)
-//        inst.play()
+          let appConductor = appDel.conductor
+        
+        AKOrchestra.addInstrument(appConductor.harmonizer)
+        AKOrchestra.addInstrument(appConductor.granularSynth)
+
     }
 
+   
+    
+    @IBAction func toggleGranular(sender: AnyObject) {
+         let appConductor = appDel.conductor
+        toggleSwitch.on ?  appConductor.granularSynth.play() : appConductor.granularSynth.stop()
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    var conductor = Conductor()
-    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
    
+//        let touch = touches.first
+//        let point = touch!.locationInView(self.view)
+//        print("location in view: \(point.x) \(point.y)")
+    }
+    
     @IBAction func C2OctaveAct(sender: AnyObject) {
-        conductor.currentOctave = 1
+        if appDel.conductor.currentOctave <= 5
+        {
+            appDel.conductor.currentOctave++
+        }
     }
     
     
     @IBAction func C1OctaveAct(sender: AnyObject) {
-        conductor.currentOctave = 0
-
+        if appDel.conductor.currentOctave >= 1
+        {
+            appDel.conductor.currentOctave--
+        }
     }
     
     
@@ -46,26 +64,26 @@ class ViewController: UIViewController {
         let index = key.tag
         
         key.backgroundColor = UIColor.greenColor()
-        conductor.play(index)
+        appDel.conductor.play(index)
         
     }
     
     @IBAction func startRecording(sender: AnyObject) {
-        harmonizer.play()
-        sampler.startRecordingToTrack("harmonizer")
+        appDel.conductor.harmonizer.play()
+        appDel.conductor.sampler.startRecordingToTrack("harmonizer")
     }
     
     @IBAction func stopRecording(sender: AnyObject) {
-        harmonizer.stop()
-        sampler.stopRecordingToTrack("harmonizer")
+        appDel.conductor.harmonizer.stop()
+        appDel.conductor.sampler.stopRecordingToTrack("harmonizer")
     }
     
     @IBAction func startPlaying(sender: AnyObject) {
-        sampler.startPlayingTrack("harmonizer")
+        appDel.conductor.sampler.startPlayingTrack("harmonizer")
     }
     
     @IBAction func stopPlaying(sender: AnyObject) {
-        sampler.stopPlayingTrack("harmonizer")
+        appDel.conductor.sampler.stopPlayingTrack("harmonizer")
     }
     
     @IBAction func keyReleased(sender: UIButton) {
@@ -78,17 +96,17 @@ class ViewController: UIViewController {
         } else {
             key.backgroundColor = UIColor.whiteColor()
         }
-        conductor.release(index)
+        appDel.conductor.release(index)
         
     }
     @IBAction func amplitudeSliderValueChanged(sender: UISlider) {
-        conductor.setAmplidute(sender.value)
+        appDel.conductor.setAmplidute(sender.value)
     }
     @IBAction func reverbSliderValueChanged(sender: UISlider) {
-        conductor.setReverbFeedbackLevel(sender.value)
+        appDel.conductor.setReverbFeedbackLevel(sender.value)
     }
     @IBAction func toneColorSliderValueChanged(sender: UISlider) {
-        conductor.setToneColor(sender.value)
+        appDel.conductor.setToneColor(sender.value)
     }
    
 

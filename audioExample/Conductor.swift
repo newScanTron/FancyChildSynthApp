@@ -6,14 +6,18 @@
 //  Copyright (c) 2014 AudioKit. All rights reserved.
 //
 
+
 class Conductor {
 
     var toneGenerator = ToneGenerator()
+       let sampler = AKSampler()
+    //harmonizer and sampaler
+    let harmonizer = HarmonizerInstrument()
+     let granularSynth = GranularSynth()
     
     var fx: EffectsProcessor
     var currentNotes = [ToneGeneratorNote](count: 13, repeatedValue: ToneGeneratorNote())
-    let frequencies = [[130.813, 138.591, 146.832, 155.563, 164.814,174.614, 184.997, 195.998, 207.652, 220.000, 233.082, 246.942, 261.625], [523.25, 554.37, 587.33, 622.25, 659.26, 698.46, 739.99, 783.99, 830.61, 880, 932.33, 987.77, 1046.5]]
-    
+    let aFreq = [27.5, 55.0, 110.0, 220.0, 440.0, 880.0, 1760.0]
     var currentOctave = 1
     init() {
         AKOrchestra.addInstrument(toneGenerator)
@@ -25,10 +29,9 @@ class Conductor {
     }
     func giveFrequency(note: Int) -> Float
     {
-        let aFreq = Double(440)
+        
         let twelveRoot = 1.059463094359
-        let result = Float(aFreq * pow(twelveRoot, Double(note)))
-        print("result: ", result)
+        let result = Float(aFreq[self.currentOctave] * pow(twelveRoot, Double(note)))
         return result
     }
     func play(key: Int) {

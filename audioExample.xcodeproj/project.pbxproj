@@ -16,6 +16,14 @@
 		9903C77F1C17904F00628B73 /* audioExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9903C77E1C17904F00628B73 /* audioExampleUITests.swift */; };
 		9903C79D1C17908C00628B73 /* libAudioKit iOS Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9903C7941C17906A00628B73 /* libAudioKit iOS Static.a */; };
 		9903C79F1C1791A300628B73 /* AudioKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9903C79E1C1791A300628B73 /* AudioKit.swift */; };
+		991EB2441C3C799E00212BD9 /* AKSoundFiles.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 991EB2431C3C799E00212BD9 /* AKSoundFiles.bundle */; };
+		993CAD081C39CEA200C68046 /* GranularInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993CAD071C39CEA200C68046 /* GranularInstrument.swift */; };
+		993CAD091C39CEA200C68046 /* GranularInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993CAD071C39CEA200C68046 /* GranularInstrument.swift */; };
+		993CAD111C39D98C00C68046 /* 101-bigfish-unstopable.wav in Resources */ = {isa = PBXBuildFile; fileRef = 993CAD101C39D98C00C68046 /* 101-bigfish-unstopable.wav */; };
+		993CAD121C39D98C00C68046 /* 101-bigfish-unstopable.wav in Resources */ = {isa = PBXBuildFile; fileRef = 993CAD101C39D98C00C68046 /* 101-bigfish-unstopable.wav */; };
+		993CAD141C39D9B400C68046 /* 161_ethex-break-14.wav in Resources */ = {isa = PBXBuildFile; fileRef = 993CAD131C39D9B400C68046 /* 161_ethex-break-14.wav */; };
+		993CAD151C39D9B400C68046 /* 161_ethex-break-14.wav in Resources */ = {isa = PBXBuildFile; fileRef = 993CAD131C39D9B400C68046 /* 161_ethex-break-14.wav */; };
+		99885D141C34A7910084C862 /* HarmonizerInstrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99885D131C34A7910084C862 /* HarmonizerInstrument.swift */; };
 		99943BB11C179D14006067AF /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99943BB01C179D14006067AF /* Conductor.swift */; };
 		99943BB21C179D14006067AF /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99943BB01C179D14006067AF /* Conductor.swift */; };
 		99943BB41C179D21006067AF /* EffectsProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99943BB31C179D21006067AF /* EffectsProcessor.swift */; };
@@ -24,6 +32,8 @@
 		99943BB81C179DB3006067AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99943BB61C179DB3006067AF /* Main.storyboard */; };
 		99943BBA1C179EC9006067AF /* ToneGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99943BB91C179EC9006067AF /* ToneGenerator.swift */; };
 		99943BBB1C179EC9006067AF /* ToneGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99943BB91C179EC9006067AF /* ToneGenerator.swift */; };
+		99FC2BB31C3D98E300359B8D /* GranularUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FC2BB21C3D98E300359B8D /* GranularUIView.swift */; };
+		99FC2BB41C3D98E300359B8D /* GranularUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FC2BB21C3D98E300359B8D /* GranularUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,10 +105,16 @@
 		9903C78C1C17906A00628B73 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = ../AudioKit/AudioKit.xcodeproj; sourceTree = "<group>"; };
 		9903C79E1C1791A300628B73 /* AudioKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioKit.swift; sourceTree = "<group>"; };
 		9903C7A01C17923E00628B73 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		991EB2431C3C799E00212BD9 /* AKSoundFiles.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AKSoundFiles.bundle; path = ../AKSoundFiles.bundle; sourceTree = "<group>"; };
+		993CAD071C39CEA200C68046 /* GranularInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GranularInstrument.swift; sourceTree = "<group>"; };
+		993CAD101C39D98C00C68046 /* 101-bigfish-unstopable.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "101-bigfish-unstopable.wav"; sourceTree = "<group>"; };
+		993CAD131C39D9B400C68046 /* 161_ethex-break-14.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "161_ethex-break-14.wav"; sourceTree = "<group>"; };
+		99885D131C34A7910084C862 /* HarmonizerInstrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonizerInstrument.swift; sourceTree = "<group>"; };
 		99943BB01C179D14006067AF /* Conductor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
 		99943BB31C179D21006067AF /* EffectsProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EffectsProcessor.swift; sourceTree = "<group>"; };
 		99943BB61C179DB3006067AF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		99943BB91C179EC9006067AF /* ToneGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToneGenerator.swift; sourceTree = "<group>"; };
+		99FC2BB21C3D98E300359B8D /* GranularUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GranularUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,12 +167,18 @@
 		9903C75A1C17904F00628B73 /* audioExample */ = {
 			isa = PBXGroup;
 			children = (
+				993CAD131C39D9B400C68046 /* 161_ethex-break-14.wav */,
+				993CAD101C39D98C00C68046 /* 101-bigfish-unstopable.wav */,
+				991EB2431C3C799E00212BD9 /* AKSoundFiles.bundle */,
 				99F0490F1C17CFC30046FCAC /* common */,
 				99F0490E1C17CFB50046FCAC /* visual */,
 				9903C75D1C17904F00628B73 /* ViewController.swift */,
 				99943BB31C179D21006067AF /* EffectsProcessor.swift */,
 				99943BB01C179D14006067AF /* Conductor.swift */,
 				99943BB91C179EC9006067AF /* ToneGenerator.swift */,
+				99885D131C34A7910084C862 /* HarmonizerInstrument.swift */,
+				993CAD071C39CEA200C68046 /* GranularInstrument.swift */,
+				99FC2BB21C3D98E300359B8D /* GranularUIView.swift */,
 			);
 			path = audioExample;
 			sourceTree = "<group>";
@@ -356,9 +378,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				993CAD141C39D9B400C68046 /* 161_ethex-break-14.wav in Resources */,
 				9903C7691C17904F00628B73 /* LaunchScreen.storyboard in Resources */,
 				9903C7661C17904F00628B73 /* Assets.xcassets in Resources */,
+				991EB2441C3C799E00212BD9 /* AKSoundFiles.bundle in Resources */,
 				99943BB71C179DB3006067AF /* Main.storyboard in Resources */,
+				993CAD111C39D98C00C68046 /* 101-bigfish-unstopable.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +392,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				99943BB81C179DB3006067AF /* Main.storyboard in Resources */,
+				993CAD121C39D98C00C68046 /* 101-bigfish-unstopable.wav in Resources */,
+				993CAD151C39D9B400C68046 /* 161_ethex-break-14.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,11 +411,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FC2BB31C3D98E300359B8D /* GranularUIView.swift in Sources */,
 				9903C75E1C17904F00628B73 /* ViewController.swift in Sources */,
 				9903C75C1C17904F00628B73 /* AppDelegate.swift in Sources */,
 				99943BB11C179D14006067AF /* Conductor.swift in Sources */,
+				993CAD081C39CEA200C68046 /* GranularInstrument.swift in Sources */,
 				9903C7641C17904F00628B73 /* audioExample.xcdatamodeld in Sources */,
 				9903C79F1C1791A300628B73 /* AudioKit.swift in Sources */,
+				99885D141C34A7910084C862 /* HarmonizerInstrument.swift in Sources */,
 				99943BBA1C179EC9006067AF /* ToneGenerator.swift in Sources */,
 				99943BB41C179D21006067AF /* EffectsProcessor.swift in Sources */,
 			);
@@ -398,6 +428,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99FC2BB41C3D98E300359B8D /* GranularUIView.swift in Sources */,
+				993CAD091C39CEA200C68046 /* GranularInstrument.swift in Sources */,
 				9903C7741C17904F00628B73 /* audioExampleTests.swift in Sources */,
 				99943BB21C179D14006067AF /* Conductor.swift in Sources */,
 				99943BB51C179D21006067AF /* EffectsProcessor.swift in Sources */,
@@ -539,6 +571,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thesonicneighborhood.audioExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/audioExample/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "../AudioKit/AudioKit/**";
 			};
 			name = Debug;
@@ -554,6 +587,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thesonicneighborhood.audioExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/audioExample/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "../AudioKit/AudioKit/**";
 			};
 			name = Release;
