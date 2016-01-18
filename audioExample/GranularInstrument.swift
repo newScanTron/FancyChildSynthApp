@@ -42,7 +42,7 @@ class GranularSynth: AKInstrument
     )
     
     // INSTRUMENT DEFINITION ===================================================
-    
+    var isPlaying = false
     override init() {
         super.init()
         

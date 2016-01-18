@@ -13,8 +13,10 @@ class ViewController: UIViewController {
  
     let appDel = UIApplication.sharedApplication().delegate as! AppDelegate
   
+    @IBOutlet weak var granularLabel1: UILabel!
+    @IBOutlet weak var granularLabel2: UILabel!
     
-    @IBOutlet weak var toggleSwitch: UISwitch!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
           let appConductor = appDel.conductor
@@ -25,12 +27,6 @@ class ViewController: UIViewController {
     }
 
    
-    
-    @IBAction func toggleGranular(sender: AnyObject) {
-         let appConductor = appDel.conductor
-        toggleSwitch.on ?  appConductor.granularSynth.play() : appConductor.granularSynth.stop()
-
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
