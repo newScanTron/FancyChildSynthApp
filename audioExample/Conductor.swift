@@ -8,7 +8,8 @@
 
 
 class Conductor {
-
+    //bool to tell weather granular or freq is selected 
+    var isGranular = false
     var toneGenerator = ToneGenerator()
        let sampler = AKSampler()
     //harmonizer and sampaler

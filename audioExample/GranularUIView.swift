@@ -20,9 +20,11 @@ class GranularUIView: UIView {
         layer.shadowRadius = 12.0
         layer.shadowOffset = CGSize(width: 0, height: 0)
         
-         infoLabel  = UILabel(frame: CGRect(x: 5.0, y: 5.0, width: self.frame.maxX, height: self.frame.maxY))
+         infoLabel  = UILabel(frame: CGRect(x: 5.0, y: 5.0, width: 100, height: 100))
         
         infoLabel.text = "Tap with Two fingers to expand"
+        infoLabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        infoLabel.numberOfLines = 3
         self.addSubview(infoLabel)
         
         
@@ -48,49 +50,83 @@ class GranularUIView: UIView {
             green: 0.5,
             blue: 185/255.0,
             alpha: 1.0)
+        let green = UIColor(red: 41.0/255.0,
+            green: 0.75,
+            blue: 85/255.0,
+            alpha: 1.0)
+        let red = UIColor(red: 141.0/255.0,
+            green: 0.5,
+            blue: 85/255.0,
+            alpha: 1.0)
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let appConductor = appDelegate.conductor
+            
+            
+            appConductor.granularSynth.frequency.value =
+                Float(point.x/self.frame.width*20)
+            appConductor.granularSynth.mix.value =
+                Float(point.y/self.frame.height)
+            appConductor.granularSynth.duration.value =
+                Float(point.x/self.frame.width*20)
+            
+            layer.shadowColor = UIColor(colorLiteralRed: 0.5, green:  Float(point.x/self.frame.width), blue:  Float(point.y/self.frame.height), alpha: 0.8).CGColor
         
         if touches.count > 1
         {
             print("what up \(point.x/self.frame.width*10) \(point.y/self.frame.height*10)")
-            if appDel.conductor.granularSynth.isPlaying
+            if appConductor.isGranular
             {
-                appDel.conductor.granularSynth.stop()
-                appDel.conductor.granularSynth.isPlaying = false
-                layer.shadowOpacity = 0.0
-                UIView.animateWithDuration(2, animations: {
-                    
-                    self.frame =
-                        CGRect(x: self.frame.minX, y: self.frame.minY , width: 100, height: 100)
-                    self.backgroundColor = blue
-                })
+                if appDel.conductor.granularSynth.isPlaying
+                {
+                    appDel.conductor.granularSynth.stop()
+                    appDel.conductor.granularSynth.isPlaying = false
+                    layer.shadowOpacity = 0.0
+                    UIView.animateWithDuration(2, animations: {
+                        
+                        self.frame =
+                            CGRect(x: self.frame.minX, y: self.frame.minY , width: 100, height: 100)
+                        self.backgroundColor = blue
+                    })
+                }
+                else
+                {
+                    infoLabel.removeFromSuperview()
+                    appDel.conductor.granularSynth.play()
+                    appDel.conductor.granularSynth.isPlaying = true
+                    layer.shadowOpacity = 1.0
+                    UIView.animateWithDuration(2, animations: {
+                        self.frame =
+                            CGRect(x: self.frame.minX , y: self.frame.minY , width: 375, height: 248)
+                        self.backgroundColor = red
+                    })
+                }
             }
             else
             {
-                infoLabel.removeFromSuperview()
-                appDel.conductor.granularSynth.play()
-                appDel.conductor.granularSynth.isPlaying = true
-                layer.shadowOpacity = 1.0
-                UIView.animateWithDuration(2, animations: {
+                if self.frame.height == 100
+                {
+                    layer.shadowOpacity = 1.0
+                    UIView.animateWithDuration(2, animations: {
+                        self.frame =
+                            CGRect(x: self.frame.minX , y: self.frame.minY , width: 375, height: 248)
+                        self.backgroundColor = green
+                    })
+                }
+                else
+                {
+                    layer.shadowOpacity = 0.0
+                    UIView.animateWithDuration(2, animations: {
+                    
                     self.frame =
-                        CGRect(x: self.frame.minX , y: self.frame.minY , width: 375, height: 248)
+                    CGRect(x: self.frame.minX, y: self.frame.minY , width: 100, height: 100)
                     self.backgroundColor = blue
-                })
+                    })
+                }
             }
+            
         }
-   
-        
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let appConductor = appDelegate.conductor
         
         
-        appConductor.granularSynth.frequency.value =
-            Float(point.x/self.frame.width*20)
-        appConductor.granularSynth.mix.value =
-            Float(point.y/self.frame.height)
-        appConductor.granularSynth.duration.value =
-            Float(point.x/self.frame.width*20)
-        
-        layer.shadowColor = UIColor(colorLiteralRed: 0.5, green:  Float(point.x/self.frame.width), blue:  Float(point.y/self.frame.height), alpha: 0.8).CGColor
         
     }
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {

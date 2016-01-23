@@ -10,11 +10,11 @@ class EffectsProcessor: AKInstrument {
 
     // Instrument Properties
     var feedbackLevel  = AKInstrumentProperty(value: 0.0, minimum: 0.0, maximum: 1.0)
-    
+    var lowPassFilter = AKLowPassFilter()
     init(audioSource: AKAudio) {
         
         super.init()
-
+        lowPassFilter = AKLowPassFilter(input: audioSource)
         // Instrument Properties
         addProperty(feedbackLevel)
 

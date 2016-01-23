@@ -17,6 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var granularLabel2: UILabel!
     
   
+    @IBAction func granularGo(sender: AnyObject) {
+        appDel.conductor.isGranular = true
+    }
+    @IBAction func freqGo(sender: AnyObject) {
+        appDel.conductor.isGranular = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
           let appConductor = appDel.conductor
